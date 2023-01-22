@@ -1,0 +1,9 @@
+.leaderboard-container {
+    margin-top: 10px;
+    margin-inline: 10%;
+    position: relative;
+}
+.buttons-container {
+    position: absolute;
+    right: 0;
+}
