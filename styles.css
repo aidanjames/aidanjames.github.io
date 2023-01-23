@@ -1,11 +1,23 @@
 .leaderboard-container {
-    margin-top: 10px;
+    margin-bottom: 80px;
+}
+.leaderboard-container, .rules-container, .player-profiles-container {
+    margin-top: 20px;
     margin-inline: 10%;
     position: relative;
 }
 .buttons-container {
     position: absolute;
     right: 0;
+}
+.rules-container, .player-profiles-container {
+    padding: 30px;
+    border-radius: 20px;
+}
+.profile-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
 }
 @media only screen and (max-width: 800px) {
     .maybe {
