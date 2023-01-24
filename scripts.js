@@ -51,7 +51,9 @@ function refreshLeaderboard() {
       avgT52.innerHTML = runnerUp[6];
       avgT53.innerHTML = loser[6];
       const currentDate = Date.now()
+      console.log(currentDate)
       const dateFormatted = new Date(currentDate).toUTCString()
+      console.log(dateFormatted)
       updatedTime.innerHTML = `Last updated: ${dateFormatted}`
     });
 }
