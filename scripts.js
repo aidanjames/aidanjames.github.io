@@ -19,8 +19,11 @@ const avgAll3 = document.querySelector("#avg-all-3");
 const avgT51 = document.querySelector("#avg-t5-1");
 const avgT52 = document.querySelector("#avg-t5-2");
 const avgT53 = document.querySelector("#avg-t5-3");
+const updatedTime = document.querySelector("#updated-time")
 
 refreshButton.addEventListener("click", refreshLeaderboard);
+
+setInterval(refreshLeaderboard, 30000); 
 
 function refreshLeaderboard() {
   fetch(URL)
@@ -47,6 +50,7 @@ function refreshLeaderboard() {
       avgT51.innerHTML = leader[6];
       avgT52.innerHTML = runnerUp[6];
       avgT53.innerHTML = loser[6];
+      updatedTime.innerHTML = `Last updated: ${Date.now()}`
     });
 }
 
