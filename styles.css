@@ -19,6 +19,9 @@
     width: 100px;
     border-radius: 50%;
 }
+.little-text {
+    font-size: 0.5em;
+}
 @media only screen and (max-width: 800px) {
     .maybe {
         display: none;

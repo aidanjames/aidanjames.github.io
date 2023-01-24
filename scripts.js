@@ -50,7 +50,9 @@ function refreshLeaderboard() {
       avgT51.innerHTML = leader[6];
       avgT52.innerHTML = runnerUp[6];
       avgT53.innerHTML = loser[6];
-      updatedTime.innerHTML = `Last updated: ${Date.now()}`
+      const currentDate = Date.now()
+      const dateFormatted = new Date(currentDate).toUTCString()
+      updatedTime.innerHTML = `Last updated: ${dateFormatted}`
     });
 }
 
