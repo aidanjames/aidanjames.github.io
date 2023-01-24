@@ -1,6 +1,6 @@
 const URL =
   "https://sheets.googleapis.com/v4/spreadsheets/1R6Jq_46UkAQ27lEESnZGn0eLEDvLz-JKWaujPOhMCo0/values/LEADERBOARD!H2:N4?key=AIzaSyA-4MMMlX2toMlimwQwckyqAitapVAMlTM";
-const refreshButton = document.querySelector("#refresh-table-button");
+// const refreshButton = document.querySelector("#refresh-table-button");
 const name1 = document.querySelector("#name-1");
 const name2 = document.querySelector("#name-2");
 const name3 = document.querySelector("#name-3");
@@ -21,7 +21,7 @@ const avgT52 = document.querySelector("#avg-t5-2");
 const avgT53 = document.querySelector("#avg-t5-3");
 const updatedTime = document.querySelector("#updated-time")
 
-refreshButton.addEventListener("click", refreshLeaderboard);
+// refreshButton.addEventListener("click", refreshLeaderboard);
 
 setInterval(refreshLeaderboard, 30000); 
 
