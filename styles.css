@@ -1,10 +1,11 @@
-.leaderboard-container {
-    margin-bottom: 80px;
-}
 .leaderboard-container, .rules-container, .player-profiles-container {
     margin-top: 20px;
     margin-inline: 10%;
     position: relative;
+}
+.leaderboard-container {
+    margin-top:65px;
+    margin-bottom: 80px;
 }
 .buttons-container {
     position: absolute;
@@ -14,10 +15,28 @@
     padding: 30px;
     border-radius: 20px;
 }
+.profile {
+    background: whitesmoke;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .profile-image {
-    height: 100px;
     width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 50%;
+}
+.profile-text-container {
+    display: flex;
+    align-items: center;
 }
 .little-text {
     color: gray;
