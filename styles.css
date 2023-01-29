@@ -19,7 +19,6 @@
     background: whitesmoke;
     padding: 10px;
     border-radius: 20px;
-    display: flex;
     gap: 10px;
     margin-bottom: 10px;
 }
@@ -39,10 +38,20 @@
     align-items: center;
 }
 .little-text {
+    display: flex;
+    justify-content: center;
     color: gray;
 }
 .maybe {
     display: none;
+}
+h5 {
+    margin-top: 5px;
+}
+.section-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 /* Responsive full browser display */
 @media only screen and (min-width: 800px) {
@@ -50,8 +59,12 @@
     .maybe {
         display: table-cell;
     }
+    /* Ensure content doesn't get to wide on large monitors */
     .leaderboard-container, .rules-container, .player-profiles-container {
         max-width: 800px;
         margin-inline: auto;
+    }
+    .profile {
+        display: flex;
     }
   }
