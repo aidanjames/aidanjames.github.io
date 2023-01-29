@@ -29,8 +29,8 @@
     align-items: center;
 }
 .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 122px;
+    height: 122px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -41,8 +41,17 @@
 .little-text {
     color: gray;
 }
-@media only screen and (max-width: 800px) {
+.maybe {
+    display: none;
+}
+/* Responsive full browser display */
+@media only screen and (min-width: 800px) {
+    /* Show additional table cells */
     .maybe {
-        display: none;
+        display: table-cell;
+    }
+    .leaderboard-container, .rules-container, .player-profiles-container {
+        max-width: 800px;
+        margin-inline: auto;
     }
   }
