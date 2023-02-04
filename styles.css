@@ -41,6 +41,7 @@
     display: flex;
     justify-content: center;
     color: gray;
+    font-size: 0.8em;
 }
 .maybe {
     display: none;
