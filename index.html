@@ -6,134 +6,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MGA Tour 2023</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js" defer></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">MGA Tour</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#rules">Rules</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Player profiles
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#cameron">CAMERON</a></li>
-                  <li><a class="dropdown-item" href="#hattie">HATTIE</a></li>
-                  <li><a class="dropdown-item" href="#pendlebury">PENDLEBURY</a></li>
-                </ul>
-              </li>
-            </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MGA Tour</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#rules">Rules</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Player profiles
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#cameron">CAMERON</a></li>
+                <li><a class="dropdown-item" href="#hattie">HATTIE</a></li>
+                <li>
+                  <a class="dropdown-item" href="#pendlebury">PENDLEBURY</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="leaderboard-container">
+        <h2 class="section-header">2023 Standings</h2>
+        <p id="updated-time" class="little-text">Last updated at...</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="table-primary"></th>
+              <th scope="col" class="table-primary">Name</th>
+              <th scope="col" class="table-primary">Total</th>
+              <th scope="col" class="table-primary">Played</th>
+              <th scope="col" class="table-primary maybe">T5 Rounds</th>
+              <th scope="col" class="table-primary maybe">AVG (All)</th>
+              <th scope="col" class="table-primary maybe">AVG (T5)</th>
+            </tr>
+          </thead>
+          <tbody id="dynamic-content">
+            <!-- Table data -->
+          </tbody>
+        </table>
+        <div class="buttons-container">
+          <a
+            href="https://forms.gle/nb3tcdTjuHSJzDw97"
+            class="btn btn-primary"
+            target="_blank"
+            >Add round</a
+          >
+        </div>
+      </div>
+      <!-- Rules -->
+      <h2 class="section-header" id="rules">Tour rules</h2>
+      <div class="rules-container bg-light">
+        <div class="rules-text">
+          <ul>
+            <li>
+              The 2023 Merton Golf Association (MGA) season will conclude at
+              11:59 PM on 30 November, 2023.
+            </li>
+            <li>
+              Players may submit as many valid rounds, played in the stableford
+              format and following standard golf rules, as they wish before the
+              season ends.
+            </li>
+            <li>
+              These rounds must be witnessed by another MGA tour player to be
+              considered valid.
+            </li>
+            <li>
+              The player's total score will be determined by the sum of their
+              top 5 stableford point rounds.
+            </li>
+            <li>
+              The individual with the highest total score at the competition end
+              date will be declared the winner and will be treated to a dinner
+              paid for by the losers. There is no second place prize.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Player profiles -->
+      <h2 class="section-header">Player profiles</h2>
+      <div class="player-profiles-container bg-light" id="profiles">
+        <!-- <h2>Player profiles</h2> -->
+        <div class="profile" id="cameron">
+          <div class="img-container">
+            <img
+              class="profile-image"
+              src="https://images.squarespace-cdn.com/content/v1/59e802b9be42d61a159cbf16/1539986581872-MWESYMJNIZ26JWGYHBU4/Mt+Humphreys+by+Gilberto+Gil+%28gilbertogil%29.jpg?format=1000w"
+              alt="player 1 image"
+            />
+            <h5>CAMERON</h5>
+          </div>
+          <div class="profile-text-container">
+            <p>
+              Cameron (AKA Sven) is widely regarded as one of the most improved
+              golfers in the world over the 12 months despite his ladies clubs,
+              massive trolley, and many layers of mountaineer clothing. Pundits
+              suggest he may end up with a handicap that he can't live up to.
+              Nevertheless, a strong favourite to take the spoils. Celebrated
+              winner of the last "Olympic" Sandy crack major, held in Brighton
+              in the summer of 2020.
+            </p>
           </div>
         </div>
-      </nav>
-    <main>
-        <div class="leaderboard-container">
-            <h2 class="section-header">2023 Standings</h2>
-            <p id="updated-time" class="little-text">Last updated at...</p>
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" class="table-primary"></th>
-                    <th scope="col" class="table-primary">Name</th>
-                    <th scope="col" class="table-primary">Total</th>
-                    <th scope="col" class="table-primary">Played</th>
-                    <th scope="col" class="table-primary maybe">T5 Rounds</th>
-                    <th scope="col" class="table-primary maybe">AVG (All)</th>
-                    <th scope="col" class="table-primary maybe">AVG (T5)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td id="name-1">Loading...</td>
-                    <td id="total-1">0</td>
-                    <td id="rounds-1">0</td>
-                    <td id="t5-1" class="maybe">(0)</td>
-                    <td id="avg-all-1" class="maybe">0.0</td>
-                    <td id="avg-t5-1" class="maybe">0.0</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td id="name-2">Loading...</td>
-                    <td id="total-2">0</td>
-                    <td id="rounds-2">0</td>
-                    <td id="t5-2" class="maybe">(0)</td>
-                    <td id="avg-all-2" class="maybe">0.0</td>
-                    <td id="avg-t5-2" class="maybe">0.0</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td id="name-3">Loading...</td>
-                    <td id="total-3">0</td>
-                    <td id="rounds-3">0</td>
-                    <td id="t5-3" class="maybe">(0)</td>
-                    <td id="avg-all-3" class="maybe">0.0</td>
-                    <td id="avg-t5-3" class="maybe">0.0</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="buttons-container">
-                <a href="https://forms.gle/nb3tcdTjuHSJzDw97" class="btn btn-primary" target="_blank">Add round</a>
-              </div>
+        <div class="profile" id="hattie">
+          <div class="img-container">
+            <img
+              class="profile-image"
+              src="https://www.golfdigest.com/content/dam/images/golfdigest/fullset/2022/11/jon-rahm-dp-world-tour-championship-2022-practice.jpg"
+              alt="player 1 image"
+            />
+            <h5>HATTIE</h5>
+          </div>
+          <div class="profile-text-container">
+            <p>
+              Hattie is the only competitor in the field to never have won a
+              Sandy Crack major (not even a "Commonwealth" eddition!), despite a
+              couple of podium appearances. He hit a personal best score of 85
+              in 2022 but you probably already knew that. He plays left handed
+              although the evidence suggests he's got this wrong. An outside
+              chance of winning due to his generous handicap. Family commitments
+              may hinder his chances.
+            </p>
+          </div>
         </div>
-        <!-- Rules -->
-        <h2 class="section-header" id="rules">Tour rules</h2>
-        <div class="rules-container bg-light">
-            
-            <div class="rules-text">
-              <ul>
-                <li>The 2023 Merton Golf Association (MGA) season will conclude at 11:59 PM on 30 November, 2023. </li>
-                <li>Players may submit as many valid rounds, played in the stableford format and following standard golf rules, as they wish before the season ends.</li>
-                <li>These rounds must be witnessed by another MGA tour player to be considered valid.</li>
-                <li>The player's total score will be determined by the sum of their top 5 stableford point rounds. </li>
-                <li>The individual with the highest total score at the competition end date will be declared the winner and will be treated to a dinner paid for by the losers. There is no second place prize.</li>
-              </ul>
-            </div>
+        <div class="profile" id="pendlebury">
+          <div class="img-container">
+            <img
+              class="profile-image"
+              src="https://www.golfchannel.com/sites/default/files/gettyimages-98146655_master.jpg"
+              alt="player 1 image"
+            />
+            <h5>PENDLEBURY</h5>
+          </div>
+          <div class="profile-text-container">
+            <p>
+              Pendlebury is a massive disappointment. Since winning the 2014
+              Sandy Crack open ("Olympic" edition) he's been a consistent loser.
+              Has not made a podium finish in as long as anyone can remember and
+              recent form doesn't bode well. That said, more and more people are
+              saying that he is due a prolonged run of good form and could be a
+              dark horse to take out both the MGA tour and the Sandy Crack open
+              in 2023. One to watch.
+            </p>
+          </div>
         </div>
-
-        <!-- Player profiles -->
-        <h2 class="section-header">Player profiles</h2>
-        <div class="player-profiles-container bg-light" id="profiles">
-            <!-- <h2>Player profiles</h2> -->
-            <div class="profile" id="cameron">
-              <div class="img-container">
-                <img class="profile-image" src="https://images.squarespace-cdn.com/content/v1/59e802b9be42d61a159cbf16/1539986581872-MWESYMJNIZ26JWGYHBU4/Mt+Humphreys+by+Gilberto+Gil+%28gilbertogil%29.jpg?format=1000w" alt="player 1 image">
-                <h5>CAMERON</h5>
-              </div>
-              <div class="profile-text-container">
-                <p>Cameron (AKA Sven) is widely regarded as one of the most improved golfers in the world over the 12 months despite his ladies clubs, massive  trolley, and many layers of mountaineer clothing. Pundits suggest he may end up with a handicap that he can't live up to. Nevertheless, a strong favourite to take the spoils. Celebrated winner of the last "Olympic" Sandy crack major, held in Brighton in the summer of 2020.</p>
-              </div>
-            </div>
-            <div class="profile" id="hattie">
-              <div class="img-container">
-                <img class="profile-image" src="https://www.golfdigest.com/content/dam/images/golfdigest/fullset/2022/11/jon-rahm-dp-world-tour-championship-2022-practice.jpg" alt="player 1 image">
-                <h5>HATTIE</h5>
-              </div>
-              <div class="profile-text-container">
-                <p>Hattie is the only competitor in the field to never have won a Sandy Crack major (not even a "Commonwealth" eddition!), despite a couple of podium appearances. He hit a personal best score of 85 in 2022 but you probably already knew that. He plays left handed although the evidence suggests he's got this wrong. An outside chance of winning due to his generous handicap. Family commitments may hinder his chances.</p>
-              </div>    
-            </div>
-            <div class="profile" id="pendlebury">
-              <div class="img-container">
-                <img class="profile-image" src="https://thispersondoesnotexist.com/image" alt="player 1 image">
-                <h5>PENDLEBURY</h5>
-              </div>
-              <div class="profile-text-container">
-                <p>Pendlebury is a massive disappointment. Since winning the 2014 Sandy Crack open ("Olympic" edition) he's been a consistent loser. Has not made a podium finish in as long as anyone can remember and recent form doesn't bode well. That said, more and more people are saying that he is due a prolonged run of good form and could be a dark horse to take out both the MGA tour and the Sandy Crack open in 2023. One to watch.</p>
-              </div>
-            </div>
-        </div>
+      </div>
     </main>
   </body>
 </html>
