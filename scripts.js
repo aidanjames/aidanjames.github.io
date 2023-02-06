@@ -34,6 +34,9 @@ function createTableRow(record) {
   // Iterate through remaining items and add td elements and add to tr
   for (let i = 1; i < record.length; i += 1) {
     let newRow = document.createElement("td");
+    if (i > 3) {
+      newRow.classList.add("maybe");
+    }
     const rowText = document.createTextNode(record[i]);
     newRow.appendChild(rowText);
     tableRow.appendChild(newRow);
