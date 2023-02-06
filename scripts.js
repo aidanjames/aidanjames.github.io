@@ -2,7 +2,7 @@ const URL =
   "https://sheets.googleapis.com/v4/spreadsheets/1R6Jq_46UkAQ27lEESnZGn0eLEDvLz-JKWaujPOhMCo0/values/LEADERBOARD!H2:N4?key=AIzaSyA-4MMMlX2toMlimwQwckyqAitapVAMlTM";
 const tableData = document.querySelector("#dynamic-content");
 
-setInterval(refreshLeaderboard, 30000);
+setInterval(refreshLeaderboard, 300000);
 
 function refreshLeaderboard() {
   var count = 1;
