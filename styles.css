@@ -54,6 +54,9 @@ h5 {
     justify-content: center;
     margin-top: 20px;
 }
+.red-text {
+    color: red;
+}
 /* Responsive full browser display */
 @media only screen and (min-width: 800px) {
     /* Show additional table cells */
