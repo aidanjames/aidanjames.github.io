@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Local scratch/work folders
+temp/
+
+# Obsidian workspace metadata (not site content)
+.obsidian/
+_posts/.obsidian/

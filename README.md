@@ -55,3 +55,34 @@ bundle exec jekyll serve
 ```
 
 Then visit `http://localhost:4000`
+
+## Decap CMS
+
+This repo includes Decap CMS at `/admin`:
+- `admin/index.html`
+- `admin/config.yml`
+
+No navigation links point to `/admin`, so the CMS is only reachable if you go directly to:
+- `https://aidanjames.github.io/admin/`
+
+### GitHub OAuth setup for `/admin` login
+
+Decap CMS with the GitHub backend needs an OAuth gateway service.
+
+1. Deploy a Decap-compatible GitHub OAuth gateway service and note its public URL.
+2. In GitHub, create an OAuth App:
+   - Go to `Settings -> Developer settings -> OAuth Apps -> New OAuth App`
+   - Set Homepage URL to `https://aidanjames.github.io`
+   - Set Authorization callback URL to your OAuth gateway callback URL (from your gateway docs)
+3. Add your OAuth App `Client ID` and `Client Secret` to that OAuth gateway service.
+4. Update `admin/config.yml`:
+   - `base_url`: set to your OAuth gateway origin (for example, `https://oauth.example.com`)
+   - `auth_endpoint`: keep as `/auth` unless your gateway uses a different path
+5. Commit and push.
+6. Open `https://aidanjames.github.io/admin/` and log in with GitHub.
+
+### Notes
+
+- Posts created in CMS are written to `_posts/` with your front matter fields:
+  `layout`, `title`, `categories`, `description`, `author`, `date`, and markdown body.
+- Uploaded media is stored in `assets/uploads`.
