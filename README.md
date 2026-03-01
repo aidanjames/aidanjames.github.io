@@ -86,3 +86,14 @@ Decap CMS with the GitHub backend needs an OAuth gateway service.
 - Posts created in CMS are written to `_posts/` with your front matter fields:
   `layout`, `title`, `categories`, `description`, `author`, `date`, and markdown body.
 - Uploaded media is stored in `assets/uploads`.
+
+### Current Production OAuth Values
+
+- Decap OAuth proxy base URL:
+  `https://decap-proxy.aidan-cms-auth.workers.dev`
+- GitHub OAuth callback URL:
+  `https://decap-proxy.aidan-cms-auth.workers.dev/callback`
+
+If you change proxy domain later, update both:
+1. `admin/config.yml` -> `backend.base_url`
+2. GitHub OAuth App -> `Authorization callback URL`
