@@ -1,0 +1,22 @@
+title: The Journal
+description: A minimal editorial blog about technology, design, and life
+author: AJ
+email: aidanjames@hey.com
+url: "https://aidanjames.github.io"
+
+github_username: aidanjames
+
+permalink: /:title/
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

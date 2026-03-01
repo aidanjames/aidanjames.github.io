@@ -1,0 +1,22 @@
+---
+layout: default
+title: Home
+---
+
+{% for post in site.posts limit:10 %}
+<article>
+  <div class="category">{{ post.categories | first }}</div>
+  <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+  <p class="excerpt">{{ post.description }}</p>
+  <div class="meta">
+    <span>By {{ post.author | default: site.author }}</span>
+    <span>{{ post.date | date: '%B %d, %Y' }}</span>
+  </div>
+</article>
+{% endfor %}
+
+{% if site.posts.size > 10 %}
+<p style="text-align: center; margin-top: 32px;">
+  <a href="{{ '/archive' | relative_url }}" style="color: #606c38;">View all posts &rarr;</a>
+</p>
+{% endif %}
