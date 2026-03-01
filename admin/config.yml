@@ -2,7 +2,7 @@ backend:
   name: github
   repo: aidanjames/aidanjames.github.io
   branch: main
-  base_url: https://aidan-cms-auth.workers.dev
+  base_url: https://decap-proxy.aidan-cms-auth.workers.dev
   auth_endpoint: /auth
 
 media_folder: "assets/uploads"
